@@ -1,0 +1,23 @@
+.main
+{
+    flex-grow: 1;
+    order: 2;
+    @include lg-min
+    {
+        padding-right: $gap;
+        padding-left: $gap;
+
+        flex: 0 0 calc(100% - #{$left-sidebar-width} - #{$right-sidebar-width});
+    }
+    @include lg-md
+    {
+        padding-right: 0;
+        padding-left: $gap;
+
+        flex: 0 0 calc(100% - #{$left-sidebar-width});
+    }
+    @include md
+    {
+        order: 1;
+    }
+}
